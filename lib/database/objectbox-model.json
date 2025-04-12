@@ -1,0 +1,180 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7938575165183010666",
+      "lastPropertyId": "5:4068334277409307719",
+      "name": "Category",
+      "properties": [
+        {
+          "id": "1:3282688965150026943",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8618601806348275898",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:6622014805940202935",
+          "name": "comments",
+          "type": 30
+        },
+        {
+          "id": "4:6851644599544052513",
+          "name": "sortOrder",
+          "type": 6
+        },
+        {
+          "id": "5:4068334277409307719",
+          "name": "lastModified",
+          "type": 12
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:7835207445491077407",
+      "lastPropertyId": "5:1051583418497647286",
+      "name": "Daily",
+      "properties": [
+        {
+          "id": "1:1450955923707312623",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:9215854684122478864",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:4336652831821502712",
+          "name": "comments",
+          "type": 30
+        },
+        {
+          "id": "4:7863802301125278495",
+          "name": "sortOrder",
+          "type": 6
+        },
+        {
+          "id": "5:1051583418497647286",
+          "name": "lastModified",
+          "type": 12
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:608413763324779504",
+      "lastPropertyId": "5:7043700248612068072",
+      "name": "Person",
+      "properties": [
+        {
+          "id": "1:3708365933243236277",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:970670323929823636",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:3651556534606107862",
+          "name": "comments",
+          "type": 30
+        },
+        {
+          "id": "4:8091339238482682826",
+          "name": "sortOrder",
+          "type": 6
+        },
+        {
+          "id": "5:7043700248612068072",
+          "name": "lastModified",
+          "type": 12
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:963539754092481015",
+          "name": "traits",
+          "targetId": "4:6373286858574820853"
+        }
+      ]
+    },
+    {
+      "id": "4:6373286858574820853",
+      "lastPropertyId": "9:5443126906040808065",
+      "name": "Trait",
+      "properties": [
+        {
+          "id": "1:2024915720814845855",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5571812572448949965",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:4192582187879458300",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:4113220158938675222",
+          "name": "red",
+          "type": 8
+        },
+        {
+          "id": "5:2124246612641076389",
+          "name": "green",
+          "type": 8
+        },
+        {
+          "id": "6:7636193319676298526",
+          "name": "blue",
+          "type": 8
+        },
+        {
+          "id": "7:2214237730893181662",
+          "name": "alpha",
+          "type": 8
+        },
+        {
+          "id": "8:381023053710019502",
+          "name": "sortOrder",
+          "type": 6
+        },
+        {
+          "id": "9:5443126906040808065",
+          "name": "lastModified",
+          "type": 12
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "4:6373286858574820853",
+  "lastIndexId": "0:0",
+  "lastRelationId": "1:963539754092481015",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

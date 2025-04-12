@@ -1,0 +1,1 @@
+enum ListType { daily, category, people }
