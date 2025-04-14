@@ -103,7 +103,8 @@ class _DatabaseScreenState extends State<DatabaseScreen> with TickerProviderStat
     final path = "${storePath.path}/objectbox/data.mdb";
 
     try {
-      final directory = "/storage/emulated/0/Documents/Eye Write";
+      final docs = await getExternalStorageDirectories(type: StorageDirectory.documents);
+      final directory = "$docs/Eye Write";
 
       Directory(directory).create();
 
@@ -129,17 +130,15 @@ class _DatabaseScreenState extends State<DatabaseScreen> with TickerProviderStat
       Directory storePath = await getApplicationDocumentsDirectory();
       final path = "${storePath.path}/objectbox/data.mdb";
 
-      // Close the current store before replacing
       DatabaseHelper.close();
 
-      // Delete existing files
       await File(path).delete();
 
       await File(file.files.first.path ?? "").copy(path);
 
       await DatabaseHelper.init();
 
-      Future.delayed(Duration(milliseconds: 250));
+      await Future.delayed(Duration(milliseconds: 250));
 
       setState(() {
         _pages = [TraitsListView(), PeopleListView(), GenericListView(type: ListType.daily), GenericListView(type: ListType.category)];
@@ -155,7 +154,7 @@ class _DatabaseScreenState extends State<DatabaseScreen> with TickerProviderStat
 
   @override
   void dispose() {
-    _controller.dispose(); // Always dispose
+    _controller.dispose();
     super.dispose();
   }
 
